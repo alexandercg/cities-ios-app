@@ -18,16 +18,20 @@ class ParserTests: XCTestCase {
         let nilResult = Parser.readTextFile("noFile", with: bundle)
         XCTAssertNil(nilResult)
         
-        let emptyResult = Parser.readTextFile("empty", with: bundle)
+        guard let emptyResult = Parser.readTextFile("empty", with: bundle) else {
+            XCTFail("Error nil instance")
+        }
         XCTAssertNotNil(emptyResult)
-        XCTAssertFalse(emptyResult!.isEmpty)
-        XCTAssertTrue(emptyResult!.isBlank)
+        XCTAssertFalse(emptyResult.isEmpty)
+        XCTAssertTrue(emptyResult.isBlank)
         
-        let withContent = Parser.readTextFile("with-content", with: bundle)
+        guard let withContent = Parser.readTextFile("with-content", with: bundle) else {
+            XCTFail("Error nil instance")
+        }
         XCTAssertNotNil(withContent)
-        XCTAssertFalse(withContent!.isEmpty)
-        XCTAssertFalse(withContent!.isBlank)
-        XCTAssertEqual(withContent!, "Has some content\n")
+        XCTAssertFalse(withContent.isEmpty)
+        XCTAssertFalse(withContent.isBlank)
+        XCTAssertEqual(withContent, "Has some content\n")
     }
 
     func testParseToCities() {

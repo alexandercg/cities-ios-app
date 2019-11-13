@@ -36,4 +36,5 @@ extension Loader {
             self.spinner.stopAnimating()
         }
     }
+    
 }

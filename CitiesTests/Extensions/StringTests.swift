@@ -10,7 +10,6 @@ import XCTest
 
 class StringTests: XCTestCase {
 
-
     func testIsBlank() {
         let blank = ""
         XCTAssertTrue(blank.isBlank)
@@ -48,5 +47,4 @@ class StringTests: XCTestCase {
         XCTAssertEqual(simpleVal.removeCharAtFirst(char: "S"), "ome text value")
     }
     
-
 }

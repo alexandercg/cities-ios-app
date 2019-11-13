@@ -22,6 +22,4 @@ class CollectionTests: XCTestCase {
         XCTAssertNil(oneElementList[safe: 1])
     }
 
-
-
 }
