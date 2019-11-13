@@ -152,4 +152,3 @@ enum CityTableDesignConstants {
     static let titleHeight: CGFloat = 20
     static let descriptionHeight: CGFloat = 40
 }
-

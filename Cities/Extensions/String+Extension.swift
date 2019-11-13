@@ -11,7 +11,7 @@ import UIKit
 extension String {
     // remove the end
     func removeCharAtLast(char: String) -> String {
-        if hasSuffix(char){
+        if hasSuffix(char) {
             return String(dropLast(char.count))
         }
         return self
@@ -19,7 +19,7 @@ extension String {
     
     // remove the beginning
     func removeCharAtFirst(char: String) -> String {
-        if hasPrefix(char){
+        if hasPrefix(char) {
             return String(dropFirst(char.count))
         }
         return self
