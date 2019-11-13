@@ -58,6 +58,4 @@ class CityTests: XCTestCase {
         XCTAssertEqual(cityMoreComps!.description!, "Description, with more information")
     }
 
-
-
 }
